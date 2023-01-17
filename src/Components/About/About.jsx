@@ -3,6 +3,7 @@ import "./about.css";
 import me from "../../assets/me2.jpg";
 import { BsAwardFill, BsFillFolderFill } from "react-icons/bs";
 import { FiUsers } from "react-icons/fi";
+import Typical from "react-typical";
 
 const About = () => {
   return (
@@ -36,12 +37,14 @@ const About = () => {
             </article>
           </div>
           <p>
-            Hello, my name is David Lozada and I am a Movil and web developer. I
-            thoroughly enjoy creating new things and never shy away from a
-            challenge. Seeing ideas and concepts come to life is one of my
-            favorite parts of the development process. I look forward to
-            continue growing and developing the skills I already have, as well
-            as learning new ones!
+            <Typical
+              loop={Infinity}
+              wrapper="b"
+              steps={[
+                "Hello, my name is David Lozada and I am a Movil and web developer. I              thoroughly enjoy creating new things and never shy away from a              challenge. Seeing ideas and concepts come to life is one of my              favorite parts of the development process. I look forward to              continue growing and developing the skills I already have, as well              as learning new ones!",
+                1000,
+              ]}
+            />
           </p>
           <a href="#contact" className="btn btn-primary">
             Let's Talk

@@ -15,12 +15,7 @@
     
 }
 .portfolio-container>h2{
-    animation: background-pan 3s linear infinite;
-    background: linear-gradient(to right,rgba(128,0,128), rgba(238,130,238) ,rgba(255,192,203) ,rgba(103,63,215,1)  );
-    background-size: 200%;
-    -webkit-background-clip:text;
-    -webkit-text-fill-color: transparent;
-    white-space: nowrap;
+
     font-weight: bold;
     
 }

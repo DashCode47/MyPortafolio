@@ -1,9 +1,38 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./contact.css";
 import { BsMailbox2, BsWhatsapp } from "react-icons/bs";
 import { SiMessenger } from "react-icons/si";
+import emailjs from "@emailjs/browser";
+import { Alert } from "bootstrap";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+  const form = useRef();
+
+  const notify = () => toast("Your email was sent");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_3mycum6",
+        "template_uslkgko",
+        form.current,
+        "_0mPb_vrN2a9SwkiZ"
+      )
+      .then(
+        (result) => {
+          e.target.reset();
+          notify();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <section id="contact">
       <h5>Get in Touch</h5>
@@ -20,12 +49,13 @@ const Contact = () => {
             <SiMessenger className="contact_option-icon" />
             <h4>Messenger</h4>
             <h5>davsh47</h5>
-            <a href="https://m.me/davsh47" target={"_blank"}>
+            <a href="mailto:davsh47@hotmail.com" target={"_blank"}>
               Send a Message
             </a>
           </article>
           <article className="contact_option">
             <BsWhatsapp className="contact_option-icon" />
+
             <h4>WhatsApp</h4>
             <h5>+79375764627</h5>
             <a
@@ -37,16 +67,16 @@ const Contact = () => {
           </article>
         </div>
         {/* END CONTACT OPTIONS */}
-        <form action="">
+        <form ref={form} onSubmit={sendEmail}>
           <input
             type={"text"}
-            name="name"
+            name="use_name"
             placeholder="Your full name"
             required
           />
           <input
             type={"email"}
-            name="email"
+            name="user_email"
             placeholder="Your Email "
             required
           />
@@ -59,6 +89,7 @@ const Contact = () => {
           <button type="submit" className="btn btn-primary">
             Send Message
           </button>
+          <ToastContainer />
         </form>
       </div>
     </section>

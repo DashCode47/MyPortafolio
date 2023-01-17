@@ -14,14 +14,14 @@ const Portafolio = () => {
           return (
             <Carousel.Item key={id} className="portfolio_items">
               <div className="portfolio_item-cta">
-                <view className="btn-container">
+                <div className="btn-container">
                   <a href={githube} className="btn" target={"_blank"}>
                     GitHub
                   </a>
                   <a href={demo} className="btn btn-primary" target={"_blank"}>
                     Live Demo
                   </a>
-                </view>
+                </div>
 
                 <h3>{title}</h3>
               </div>

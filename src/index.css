@@ -12,7 +12,7 @@
 :root{
     --color-bg:#1f1f38;
     --color-bg-variante:#2c2c6c;
-    --color-primary:#4db5ff;
+    --color-primary:rgba(103,63,215,1);
     --color-primary-variant:rgba(77,181,255,0.4);
     --color-white:#fff;
     --color-light: rgba(255,255,255,0.6);
@@ -36,7 +36,8 @@ body{
     background: var(--color-bg);
     color: var(--color-white);
     line-height: 1.7;
-    background-image: url(../src/assets/bg-texture5.jpg);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,118,1) 55%, rgba(0,212,255,1) 100%);
+    /* background-image: url(../src/assets/bg-texture5.jpg); */
     background-size: cover;
 }
 
@@ -65,10 +66,27 @@ section > h5 {
     text-align: center;
     color: var(--color-light);
 }
+@keyframes background-pan {
+    from{
+        background-position: 0% center;
+    }
+
+    to{
+        background-position: -200% center;
+    }
+    
+}
 
 section >h2{
-    color: var(--color-primary);
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(to right,rgba(128,0,128), rgba(238,130,238) ,rgba(255,192,203) ,rgba(103,63,215,1)  );
     margin-bottom: 3rem;
+    background-size: 200%;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+    font-weight: bold;
+    white-space: nowrap;
 }
 .text-light{
     color: var(--color-light);
@@ -92,9 +110,10 @@ a:hover{
     cursor: pointer;
     border: 1px solid var(--color-primary);
     transition: var(--transition);
+    background: var(--color-white);
 }
 .btn:hover{
-    background: var(--color-white);
+    background: var(--color-primary);
     color: var(--color-bg);
     border-color: transparent;
 }

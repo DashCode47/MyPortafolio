@@ -8,10 +8,10 @@ const CTA = () => {
         Dowload CV
       </a>
       <a
-        href="#contact"
+        href="#portafolio"
         className="animate__animated animate__zoomIn btn btn-primary"
       >
-        Let's Talk
+        My Work
       </a>
     </div>
   );

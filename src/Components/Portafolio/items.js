@@ -1,6 +1,6 @@
 import IMG1 from "../../assets/portfolio.png";
 import IMG2 from "../../assets/portfolio2.png";
-import IMG3 from "../../assets/portfolio3.png";
+import IMG3 from "../../assets/portfolio5.png";
 
 const data = [
   {
@@ -15,7 +15,7 @@ const data = [
     image: IMG3,
     title: "My Dormitory",
     github: "https://github.com/DashCode47/Kursobaya-",
-    demo: "",
+    demo: "https://drive.google.com/file/d/1zH8YT7ghaoreTfiLROg8bJQEbIIHV6TL/view?usp=share_link",
   },
   {
     id: 3,
