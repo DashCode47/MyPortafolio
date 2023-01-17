@@ -1,34 +1,28 @@
 import IMG1 from "../../assets/portfolio.png";
-import IMG2 from "../../assets/portfolio2.jpg";
+import IMG2 from "../../assets/portfolio2.png";
+import IMG3 from "../../assets/portfolio3.png";
 
 const data = [
   {
     id: 1,
     image: IMG1,
-    title: "Project 1",
-    githube: "https://githube.com",
-    demo: "",
+    title: "Fantasy Team",
+    github: "https://github.com/DashCode47/Fantasy-Team",
+    demo: "https://fantasy-team-kruger-star-km-dl.vercel.app",
   },
   {
     id: 2,
-    image: IMG2,
-    title: "Project 1",
-    githube: "https://githube.com",
+    image: IMG3,
+    title: "My Dormitory",
+    github: "https://github.com/DashCode47/Kursobaya-",
     demo: "",
   },
   {
     id: 3,
-    image: IMG1,
-    title: "Project 1",
-    githube: "https://githube.com",
-    demo: "",
-  },
-  {
-    id: 4,
     image: IMG2,
-    title: "Project 1",
-    githube: "https://githube.com",
-    demo: "",
+    title: "Web Agency",
+    github: "https://github.com/DashCode47/DashCode-Agency",
+    demo: "https://dash-code-agency.vercel.app",
   },
 ];
 export default data;
