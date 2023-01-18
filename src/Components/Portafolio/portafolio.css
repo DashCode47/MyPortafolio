@@ -53,8 +53,10 @@
 /* ========================MEEDIA QUERIES(MEDIUM DEVICES) */
 @media screen and (max-width:1024px) {
     .portfolio_container{
-        grid-template-columns: 1fr 1fr;
-        gap: 1.2rem;
+       height: 470px;
+    }
+    .img-in{
+        height: 300px;
     }
 }
 
@@ -62,7 +64,9 @@
 /* ========================MEEDIA QUERIES(SMALL DEVICES) */
 @media screen and (max-width:600PX) {
     .portfolio_container{
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
+        height: 450px;
+     }
+     .img-in{
+         height: 300px;
+     }
 }

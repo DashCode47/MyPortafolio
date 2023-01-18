@@ -3,7 +3,7 @@ import "./about.css";
 import me from "../../assets/me2.jpg";
 import { BsAwardFill, BsFillFolderFill } from "react-icons/bs";
 import { FiUsers } from "react-icons/fi";
-import Typical from "react-typical";
+import Typewriter from "typewriter-effect";
 
 const About = () => {
   return (
@@ -24,11 +24,6 @@ const About = () => {
               <h5>Experience</h5>
               <small>2+ Years working</small>
             </article>
-            {/* <article className="about_card">
-              <FiUsers className="about_icon" />
-              <h5>Clients</h5>
-              <small>25+ Worldwide</small>
-            </article> */}
 
             <article className="about_card">
               <BsFillFolderFill className="about_icon" />
@@ -37,13 +32,16 @@ const About = () => {
             </article>
           </div>
           <p>
-            <Typical
-              loop={Infinity}
-              wrapper="b"
-              steps={[
-                "Hello, my name is David Lozada and I am a Movil and web developer. I              thoroughly enjoy creating new things and never shy away from a              challenge. Seeing ideas and concepts come to life is one of my              favorite parts of the development process. I look forward to              continue growing and developing the skills I already have, as well              as learning new ones!",
-                1000,
-              ]}
+            <Typewriter
+              options={{
+                strings: [
+                  "Hello, my name is David Lozada and I am a Movil and web developer. I              thoroughly enjoy creating new things and never shy away from a              challenge. Seeing ideas and concepts come to life is one of my              favorite parts of the development process. I look forward to              continue growing and developing the skills I already have, as well              as learning new ones!",
+                ],
+                autoStart: true,
+                loop: false,
+                delay: 60,
+                deleteSpeed: 20,
+              }}
             />
           </p>
           <a href="#contact" className="btn btn-primary">

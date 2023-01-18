@@ -4,7 +4,7 @@ import CTA from "./CTA";
 import me from "../../assets/me.jpg";
 import HeaderSocials from "./HeaderSocials";
 import "animate.css";
-import Typical from "react-typical";
+import Typewriter from "typewriter-effect";
 
 const Header = () => {
   return (
@@ -13,19 +13,17 @@ const Header = () => {
         <h5>Hello I'm</h5>
         <h1 className="animate__animated animate__slideInLeft">David Lozada</h1>
         <h5 className="h5 text-light">
-          <Typical
-            loop={Infinity}
-            wrapper="b"
-            steps={[
-              "Mobile Developer",
-              1500,
-              "Web Developer",
-              1500,
-              "React JS",
-              1500,
-              "React Native",
-              1500,
-            ]}
+          <Typewriter
+            options={{
+              strings: [
+                "Mobile Developer",
+                "Web Developer",
+                "React JS",
+                "React Native",
+              ],
+              autoStart: true,
+              loop: true,
+            }}
           />
         </h5>
         <CTA />

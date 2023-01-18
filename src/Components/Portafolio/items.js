@@ -1,6 +1,7 @@
 import IMG1 from "../../assets/portfolio.png";
 import IMG2 from "../../assets/portfolio2.png";
 import IMG3 from "../../assets/portfolio5.png";
+import IMG4 from "../../assets/portfolio3.png";
 
 const data = [
   {
@@ -23,6 +24,14 @@ const data = [
     title: "Web Agency",
     github: "https://github.com/DashCode47/DashCode-Agency",
     demo: "https://dash-code-agency.vercel.app",
+  },
+
+  {
+    id: 3,
+    image: IMG4,
+    title: "Recipe App",
+    github: "https://github.com/DashCode47/Recipes-App",
+    demo: "https://drive.google.com/file/d/1QHVe7lP8j1Sgb57cXI7ZiDJR_ObxbfFe/view?usp=share_link",
   },
 ];
 export default data;
