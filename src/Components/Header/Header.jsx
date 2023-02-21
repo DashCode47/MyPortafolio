@@ -25,6 +25,20 @@ const Header = () => {
               loop: true,
             }}
           />
+          {/*  <Typical
+            loop={Infinity}
+            wrapper="b"
+            steps={[
+              "Mobile Developer",
+              1500,
+              "Web Developer",
+              1500,
+              "React JS",
+              1500,
+              "React Native",
+              1500,
+            ]}
+          /> */}
         </h5>
         <CTA />
         <HeaderSocials />
