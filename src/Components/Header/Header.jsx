@@ -9,6 +9,7 @@ import Typewriter from "typewriter-effect";
 const Header = () => {
   return (
     <header>
+      <section id="home">
       <div className="container header__container">
         <h5>Hello I'm</h5>
         <h1 className="animate__animated animate__slideInLeft">David Lozada</h1>
@@ -48,8 +49,9 @@ const Header = () => {
         </a>
         <div className="me">
           <img src={me} alt="me" />
+          </div>
         </div>
-      </div>
+      </section>
     </header>
   );
 };

@@ -10,14 +10,16 @@ const Portafolio = () => {
       <h2>Portfolio</h2>
 
       <Carousel className="container portfolio_container">
-        {data.map(({ id, image, title, githube, demo }) => {
+        {data.map(({ id, image, title, github, demo, privateRepo }) => {
           return (
             <Carousel.Item key={id} className="portfolio_items">
               <div className="portfolio_item-cta">
                 <div className="btn-container">
-                  <a href={githube} className="btn" target={"_blank"}>
-                    GitHub
-                  </a>
+                  {!privateRepo ? <a href={github} className="btn" target={"_blank"}>
+                    Repository
+                  </a> : <a href={github} className="btn" target={"_blank"}>
+                    Private Repository
+                  </a>}
                   <a href={demo} className="btn btn-primary" target={"_blank"}>
                     Live Demo
                   </a>

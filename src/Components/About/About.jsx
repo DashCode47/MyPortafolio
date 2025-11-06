@@ -22,7 +22,7 @@ const About = () => {
             <article className="about_card">
               <BsAwardFill className="about_icon" />
               <h5>Experience</h5>
-              <small>3+ Years working</small>
+              <small>5+ Years working</small>
             </article>
 
             <article className="about_card">

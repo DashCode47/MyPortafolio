@@ -42,14 +42,14 @@ const Contact = () => {
           <article className="contact_option">
             <BsMailbox2 className="contact_option-icon" />
             <h4>Email</h4>
-            <h5>davsh47@hotmail.com</h5>
-            <a href="mailto:davsh47@hotmail.com">Send a Message</a>
+            <h5>daviddev47@hotmail.com</h5>
+            <a href="mailto:daviddev47@hotmail.com">Send a Message</a>
           </article>
           <article className="contact_option">
             <SiMessenger className="contact_option-icon" />
             <h4>Messenger</h4>
             <h5>davsh47</h5>
-            <a href="mailto:davsh47@hotmail.com" target={"_blank"}>
+            <a href="mailto:daviddev47@hotmail.com" target={"_blank"}>
               Send a Message
             </a>
           </article>
@@ -57,9 +57,9 @@ const Contact = () => {
             <BsWhatsapp className="contact_option-icon" />
 
             <h4>WhatsApp</h4>
-            <h5>+79375764627</h5>
+            <h5>+593 978724619</h5>
             <a
-              href="https://api.whatsapp.com/send?phone=+79375764627"
+              href="https://api.whatsapp.com/send?phone=+593 978724619"
               target={"_blank"}
             >
               Send a Message

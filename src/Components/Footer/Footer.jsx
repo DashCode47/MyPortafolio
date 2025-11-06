@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer>
       <a href="#" className="footer_logo">
-        DavCode
+        DashCode
       </a>
 
       <ul className="permalinks">
@@ -45,7 +45,7 @@ const Footer = () => {
       </div>
 
       <div className="footer_copyright">
-        <small>&copy; DavCode.All rights reserved</small>
+        <small>&copy; DashCode.All rights reserved</small>
       </div>
     </footer>
   );

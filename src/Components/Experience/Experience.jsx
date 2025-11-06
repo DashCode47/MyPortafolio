@@ -20,21 +20,21 @@ const Experience = () => {
             <article className="experience_details">
               <AiFillCheckCircle className="experience_details-icon" />
               <div>
-                <h4>CSS</h4>
+                <h4>REDUX</h4>
                 <small className="text-light">Experienced</small>
               </div>
             </article>
             <article className="experience_details">
               <AiFillCheckCircle className="experience_details-icon" />
               <div>
-                <h4>JS</h4>
+                <h4>SAGAS</h4>
                 <small className="text-light">Experienced</small>
               </div>
             </article>
             <article className="experience_details">
               <AiFillCheckCircle className="experience_details-icon" />
               <div>
-                <h4>Bootstrap</h4>
+                <h4>Typescript</h4>
                 <small className="text-light">Intermediate</small>
               </div>
             </article>
