@@ -35,7 +35,7 @@ const About = () => {
             <Typewriter
               options={{
                 strings: [
-                  "Hello, my name is David Lozada and I am a Movil and web developer. I              thoroughly enjoy creating new things and never shy away from a              challenge. Seeing ideas and concepts come to life is one of my              favorite parts of the development process. I look forward to              continue growing and developing the skills I already have, as well              as learning new ones!",
+                  "Hello, my name is David Lozada and I am a mobile and web developer. I              thoroughly enjoy creating new things and never shy away from a              challenge. Seeing ideas and concepts come to life is one of my              favorite parts of the development process. I look forward to              continue growing and developing the skills I already have, as well              as learning new ones!",
                 ],
                 autoStart: true,
                 loop: false,

@@ -1,78 +1,159 @@
 .container.contact_container{
-    width: 58%;
+    width: 65%;
     display: grid;
-    grid-template-columns: 30% 58%;
-    gap: 12%;
+    grid-template-columns: 35% 58%;
+    gap: 7%;
 }
 
 .contact_options{
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
-    overflow:auto;
-}
-
-.contact_option:nth-child(1)>h5{
-    transform: scale(0.6);
+    gap: 1.5rem;
 }
 
 .contact_option{
-    background: var(--color-bg-variante);
-    padding: 1.2rem;
-    border-radius: 1.2rem;
+    background: rgba(26, 26, 46, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
     text-align: center;
-    border: 1px solid transparent;
+    border: 1px solid rgba(99, 102, 241, 0.2);
     transition: var(--transition);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact_option:hover{
-    background: transparent;
-    border-color: var(--color-primary-variant);
+    background: rgba(26, 26, 46, 0.8);
+    border-color: var(--color-primary);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
 }
 
 .contact_option-icon{
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-primary);
+    display: block;
+    transition: var(--transition);
+}
+
+.contact_option:hover .contact_option-icon{
+    transform: scale(1.1);
+    color: var(--color-secondary);
+}
+
+.contact_option h4{
+    color: var(--color-white);
+    font-size: 1rem;
+    font-weight: 600;
     margin-bottom: 0.5rem;
 }
-.contact_option a{
-    margin-top: 0.7rem;
-    display: inline-block;
-    font-size: 0.8rem;
-}
+
 .contact_option h5{
     color: var(--color-light);
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+}
+
+.contact_option a{
+    margin-top: 0.5rem;
+    display: inline-block;
+    font-size: 0.85rem;
+    color: var(--color-primary);
+    transition: var(--transition);
+}
+
+.contact_option a:hover{
+    color: var(--color-white);
+    transform: translateX(3px);
 }
 
 /* ==================form========================== */
 form{
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1.5rem;
 }
-input,textarea{
+
+input, textarea{
     width: 100%;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    background: transparent;
-    border: 2px solid var(--color-bg-variante);
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    background: rgba(26, 26, 46, 0.6);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(99, 102, 241, 0.2);
     resize: none;
     color: var(--color-white);
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+input:focus, textarea:focus{
+    outline: none;
+    border-color: var(--color-primary);
+    background: rgba(26, 26, 46, 0.8);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+input::placeholder, textarea::placeholder{
+    color: var(--color-lighter);
+}
+
+textarea{
+    min-height: 150px;
+    line-height: 1.6;
+}
+
+form button[type="submit"]{
+    align-self: flex-start;
+    margin-top: 0.5rem;
 }
 
 /* ========================MEEDIA QUERIES(MEDIUM DEVICES) */
 @media screen and (max-width:1024px) {
     .container.contact_container{
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 3rem;
+        width: 75%;
+    }
+    
+    .contact_options{
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .contact_option{
+        flex: 1;
+        min-width: 200px;
+        max-width: 250px;
     }
 }
 
-
 /* ========================MEEDIA QUERIES(SMALL DEVICES) */
-@media screen and (max-width:600PX) {
+@media screen and (max-width:600px) {
     .container.contact_container{
         grid-template-columns: 1fr;
         width: var(--container-width-sm);
+        gap: 2.5rem;
     }
     
+    .contact_options{
+        flex-direction: column;
+    }
+    
+    .contact_option{
+        max-width: 100%;
+    }
+    
+    input, textarea{
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
 }

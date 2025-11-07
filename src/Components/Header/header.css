@@ -1,21 +1,81 @@
 header{
-    height: 100vh;
-    padding-top: 3rem;
-    overflow: hidden;
-
+    min-height: 100vh;
+    padding-top: 5rem;
+    overflow: visible;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
+
 .header__container{
     text-align: center;
-    height: 100%;
+    min-height: 70vh;
     position: relative;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 2;
+    padding-top: 2rem;
+    width: 100%;
+    max-width: 100%;
 }
+
+.header__container h5{
+    font-size: 1.1rem;
+    font-weight: 200;
+    color: var(--color-light);
+    margin-bottom: 0.5rem;
+    animation: fadeInUp 0.6s ease-out;
+    position: relative;
+    z-index: 10;
+    background: transparent;
+}
+
+.header__container h1{
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    animation: fadeInUp 0.8s ease-out;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+    position: relative;
+    z-index: 10;
+    max-width: 90%;
+    word-wrap: break-word;
+    background-color: transparent;
+}
+
+.header__container .h5{
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out;
+    min-height: 2rem;
+    position: relative;
+    z-index: 10;
+    background: transparent;
+}
+
 /* ======================CTA=========== */
 .cta{
-    margin-top: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
     display: flex;
-    gap: 1.2rem;
+    gap: 1.5rem;
     justify-content: center;
+    flex-wrap: wrap;
+    animation: fadeInUp 1.2s ease-out;
+    z-index: 10;
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
 }
 
 /* ======================HEADER SOCIALS=========== */
@@ -23,58 +83,191 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.8rem;
+    gap: 1rem;
     position: absolute;
-    left: 0;
-    bottom: 7rem;
+    left: 2rem;
+    bottom: 10rem;
+    z-index: 10;
+    margin-top: 2rem;
 }
+
 .header_socials::after{
     content: '';
-    width: 1px;
-    height: 2rem;
+    width: 2px;
+    height: 3rem;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+.header_socials a{
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(26, 26, 46, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 0.5rem;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.header_socials a:hover{
     background: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-glow);
+    border-color: var(--color-primary);
 }
 
 /* ======================IMAGE=========== */
 .me{
-    background: var(--color-primary);
-    width: 16rem;
-    height: 18rem;
+    width: 20rem;
+    height: 22rem;
     position: absolute; 
-    left: calc(50% - 8rem); 
-    border-radius: 12rem 12rem 0 0;
-    overflow: hidden; 
-    margin-top: 2rem;
+    left: calc(50% - 10rem); 
+    bottom: 10rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    background: var(--gradient-primary);
+    padding: 0.5rem;
+    animation: float 6s ease-in-out infinite;
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
+    z-index: 1;
+    pointer-events: none;
 }
-.scroll_down{
+
+.me img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1.5rem;
+    object-fit: cover;
+}
+
+/* Decorative circles */
+.me::before{
+    content: '';
     position: absolute;
-    right: -2.3rem;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    border-radius: 2rem;
+    opacity: 0.2;
+    filter: blur(20px);
+    z-index: -1;
+    animation: float 6s ease-in-out infinite reverse;
+}
+
+.scroll_down{
+    position: fixed;
+    right: 2rem;
     bottom: 5rem;
     transform: rotate(90deg);
-    font-weight: 300;
+    transform-origin: center;
+    font-weight: 400;
     font-size: 0.9rem;
+    color: var(--color-light);
+    letter-spacing: 2px;
+    transition: var(--transition);
+    z-index: 10;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.scroll_down:hover{
+    color: var(--color-primary);
+    transform: rotate(90deg) translateX(-5px);
+}
+
+.scroll_down::after{
+    content: '↓';
+    position: absolute;
+    right: -1.5rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    animation: float 2s ease-in-out infinite;
 }
 
 /* ========================MEEDIA QUERIES(MEDIUM DEVICES) */
 @media screen and (max-width:1024px) {
     header{
-        height: 80vh;
-        padding-top: 10rem;
+        height: 100vh;
+        padding-top: 4rem;
     }
+    
+    .header__container{
+        padding-top: 1.5rem;
+        padding-bottom: 2rem;
+    }
+    
+    .header__container h1{
+        font-size: 3rem;
+    }
+    
+    .me{
+        width: 18rem;
+        height: 20rem;
+        left: calc(50% - 9rem);
+        bottom: 7rem;
+    }
+    
+    .cta{
+        bottom: 1.5rem;
+    }
+    
     .header_socials{
+        left: 1rem;
         bottom: 18rem;
+    }
+    
+    .scroll_down{
+        right: 1rem;
+        bottom: 6rem;
     }
 }
 
-
 /* ========================MEEDIA QUERIES(SMALL DEVICES) */
-@media screen and (max-width:600PX) {
+@media screen and (max-width:600px) {
     header{
         height: 100vh;
+        padding-top: 3rem;
     }
+    
+    .header__container{
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+    
+    .header__container h1{
+        font-size: 2.5rem;
+    }
+    
+    .header__container .h5{
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .me{
+        width: 14rem;
+        height: 16rem;
+        left: calc(50% - 7rem);
+        bottom: 6rem;
+    }
+    
+    .cta{
+        bottom: 1rem;
+        gap: 1rem;
+    }
+    
+    .cta .btn{
+        padding: 0.75rem 1.5rem;
+        font-size: 0.85rem;
+    }
+    
     .header_socials,
     .scroll_down{
         display: none;
     }
-    
 }

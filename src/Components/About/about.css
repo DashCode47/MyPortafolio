@@ -2,103 +2,176 @@
     display: grid;
     grid-template-columns: 35% 50%;
     gap: 15%;
+    align-items: center;
 }
 
 .about_me{
-    height: 80%; 
+    width: 100%;
+    aspect-ratio: 1/1;
     border-radius: 2rem;
-    background: linear-gradient(
-        45deg,
-        transparent,
-        var(--color-primary),
-        transparent
-    );
+    background: var(--gradient-primary);
     display: grid;
     place-items: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+}
+
+.about_me::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    opacity: 0.3;
+    filter: blur(30px);
+    z-index: -1;
+}
+
+.about_me:hover{
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
 }
 
 .about_me-image{
     border-radius: 2rem;
     overflow: hidden;
-    transform: rotate(10deg);
+    transform: rotate(5deg);
     transition: var(--transition);
+    width: 100%;
     height: 100%;
+    border: 3px solid rgba(255, 255, 255, 0.1);
 }
 
 .about_me-image:hover{
     transform: rotate(0deg);
 }
 
+.about_me-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .about_cards{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+    margin-bottom: 2rem;
 }
+
 .about_card{
-    background: var(--color-bg-variante);
-    border: 1px solid transparent;
-    border-radius: 1rem;
+    background: rgba(26, 26, 46, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 1.25rem;
     padding: 2rem;
     text-align: center;
     transition: var(--transition);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .about_card:hover{
-    background: transparent;
-    border-color: var(--color-primary-variant);
+    background: rgba(26, 26, 46, 0.8);
+    border-color: var(--color-primary);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
     cursor: default;
 }
 
 .about_icon{
     color: var(--color-primary);
-    font-size: 1.4rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
+    display: block;
+    transition: var(--transition);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about_card:hover .about_icon{
+    transform: scale(1.1);
+    color: var(--color-secondary);
 }
 
 .about_card h5{
-    font-size: 0.95rem;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-white);
+    text-align: center;
+    width: 100%;
 }
 
 .about_card small{
-    font-size: 0.7rem;
+    font-size: 0.85rem;
     color: var(--color-light);
+    text-align: center;
+    display: block;
+    width: 100%;
 }
 
 .about_content p {
     margin: 2rem 0 2.6rem;
     color: var(--color-light);
+    line-height: 1.8;
+    font-size: 1rem;
 }
 
 /* ========================MEEDIA QUERIES(MEDIUM DEVICES) */
 @media screen and (max-width:1024px) {
     .about_container{
         grid-template-columns: 1fr;
-        gap: 0;
+        gap: 3rem;
     }
+    
     .about_me{
-        width: 50%;
-        margin: 2rem auto 4rem;
+        width: 60%;
+        margin: 0 auto;
     }
-    .about_content p{
-        margin:1rem 0 1.5rem
-    }
-}
-
-
-/* ========================MEEDIA QUERIES(SMALL DEVICES) */
-@media screen and (max-width:600PX) {
-    .about_me{
-        width: 65%;
-        margin: 0 auto 3rem;
-    }
-    .about_cards{
-        grid-template-columns: 1fr 1fr;
-        gap: 1.5rem;
-    }
+    
     .about_content{
         text-align: center;
     }
+    
+    .about_content p{
+        margin: 1.5rem 0 2rem;
+    }
+    
+    .about_cards{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* ========================MEEDIA QUERIES(SMALL DEVICES) */
+@media screen and (max-width:600px) {
+    .about_me{
+        width: 75%;
+        margin: 0 auto 3rem;
+    }
+    
+    .about_cards{
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .about_content{
+        text-align: center;
+    }
+    
     .about_content p{
         margin: 1.5rem 0;
+        font-size: 0.9rem;
+    }
+    
+    .about_card{
+        padding: 1.5rem;
     }
 }

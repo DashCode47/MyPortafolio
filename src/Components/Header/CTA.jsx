@@ -4,12 +4,12 @@ import CV from "../../assets/cv.pdf";
 const CTA = () => {
   return (
     <div className="cta">
-      <a href={CV} className="animate__animated animate__zoomIn btn">
-        Dowload CV
+      <a href={CV} download className="btn btn-secondary animate__animated animate__zoomIn">
+        Download CV
       </a>
       <a
         href="#portafolio"
-        className="animate__animated animate__zoomIn btn btn-primary"
+        className="btn btn-primary animate__animated animate__zoomIn"
       >
         My Work
       </a>
